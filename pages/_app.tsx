@@ -1,15 +1,28 @@
+import { useEffect } from "react";
+
 import type { AppProps } from 'next/app'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { DefaultSeo } from "next-seo";
 
+import * as gtag from "../lib/gtag";
 
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  useEffect(() => {
+    const handleRouteChange = (url:URL) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
