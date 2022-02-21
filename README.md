@@ -28,3 +28,4 @@ We setup default seo using the [next-seo package] (https://github.com/garmeeh/ne
 #### Other env variables
 
 We advice you create a `.env.local` file in your root folder and add your sensitive environmental variables to this file. For less sensitive environmental variables (like site url and title), add them under the `next.config.js` file.
+NB: Prefixing a env variable with `NEXT_PUBLIC_` exposes it to the browser. See [Next.js documentation] (https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser).
