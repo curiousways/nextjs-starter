@@ -8,8 +8,8 @@ import * as Fathom from "fathom-client";
 
 import * as gtag from "../lib/gtag";
 
-import "../styles/globals.css";
-// import "../styles/global.scss";
+import "../styles/globals.css"; // Global style sheet for css
+// import "../styles/global.scss"; //Global stylesheet for sass
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
