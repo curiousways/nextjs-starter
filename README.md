@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEXT-TYPESCRIPT STARTER
 
-## Getting Started
+### What's Included
 
-First, run the development server:
+- Styling options
+- Page analytics
+- SEO setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+#### Styling
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Styling options include:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Vanilla CSS
+- Sass/Scss
+- Tailwindcss
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+You can also use modular styling with css or scss.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### Page Analytics
 
-## Learn More
+We added functionalities for both google and fathom analytics in this project, so you can choose one that's suitable for your project.
+NB: Create a a `.env.local` file in your root and add your google or fathom analytics id as an environmental variable. Use `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` for google analytics id and `NEXT_PUBLIC_FATHOM_ANALYTICS_ID` as env variable for fathom analytics.
 
-To learn more about Next.js, take a look at the following resources:
+#### SEO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We setup default seo using the [next-seo package] (https://github.com/garmeeh/next-seo). You can add your site name, site title and site url as environmental variables under the `next.config.js` file. See [the documentation] (https://github.com/garmeeh/next-seo) on how to add seo bits on a per page basis.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Other env variables
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We advice you create a `.env.local` file in your root folder and add your sensitive environmental variables to this file. For less sensitive environmental variables (like site url and title), add them under the `next.config.js` file.
