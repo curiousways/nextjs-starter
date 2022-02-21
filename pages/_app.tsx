@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import { useRouter } from "next/router";
-
 import { DefaultSeo } from "next-seo";
+
+import * as Fathom from "fathom-client";
 
 import * as gtag from "../lib/gtag";
 
@@ -13,12 +13,26 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const siteUrl = process.env.SITE_URL as string;
+  const siteTitle = process.env.SITE_TITLE;
+  const fathom = process.env.NEXT_PUBLIC_FATHOM_ANALYTICS_ID as string; //fathom analytics id
 
   useEffect(() => {
+    // Load fathom analytics
+    // Fathom.load(fathom, {
+    //   includedDomains: [siteUrl],
+    // });
+
+    // Google Analytics
     const handleRouteChange = (url: URL) => {
       gtag.pageview(url);
     };
+
+    // Fathom Analytics
+    // const handleRouteChange = () => {
+    //   Fathom.trackPageview();
+    // };
+
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
@@ -27,16 +41,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>{/* Insert head code here. Example google fonts */}</Head>
       <DefaultSeo
-        title="Enter title here"
+        title={siteTitle}
         description="Enter description here"
         canonical={`${siteUrl}${router.pathname}`}
         openGraph={{
           type: "website",
           url: `${siteUrl}`,
-          site_name: "Enter Sitename here",
-          title: "Enter title here",
+          site_name: siteTitle,
+          title: siteTitle,
           description: "Enter description here",
           images: [
             {
