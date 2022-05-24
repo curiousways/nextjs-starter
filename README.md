@@ -25,6 +25,10 @@ NB: Create a a `.env.local` file in your root and add your google or fathom anal
 
 We setup default seo using the [next-seo package](https://github.com/garmeeh/next-seo). You can add your site name, site title and site url as environmental variables under the `next.config.js` file. See [the documentation](https://github.com/garmeeh/next-seo) on how to add seo bits on a per page basis.
 
+### Sitemap Generation
+
+We use the [next-sitemap package](https://www.npmjs.com/package/next-sitemap) to generate sitemap for different pages.
+
 #### Other env variables
 
 We advice you create a `.env.local` file in your root folder and add your sensitive environmental variables to this file. For less sensitive environmental variables (like site url and title), add them under the `next.config.js` file.
