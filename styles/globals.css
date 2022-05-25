@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "font name";
+    src: url("/assets/fonts/MuseoSans300/font.woff2") format("woff2"),
+      url("/assets/fonts/MuseoSans300/font.woff") format("woff");
+    font-weight: font-weight;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "font name";
+    src: url("/assets/fonts/MuseoSans500/font.woff2") format("woff2"),
+      url("/assets/fonts/MuseoSans500/font.woff") format("woff");
+    font-weight: font-weight;
+    font-style: strong;
+    font-display: swap;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}

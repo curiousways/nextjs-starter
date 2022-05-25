@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
-
 import * as Fathom from "fathom-client";
 
 import * as gtag from "../lib/gtag";
+
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 import "../styles/globals.css"; // Global style sheet for css
 // import "../styles/global.scss"; //Global stylesheet for sass
@@ -66,7 +68,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           cardType: "summary_large_image",
         }}
       />
+      <Nav />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
