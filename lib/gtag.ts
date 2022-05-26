@@ -1,4 +1,4 @@
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+export const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID;
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: URL) => {
@@ -8,11 +8,11 @@ export const pageview = (url: URL) => {
 };
 
 type GTagEvent = {
-    action: string;
-    category: string;
-    label: string;
-    value: number;
-  };
+  action: string;
+  category: string;
+  label: string;
+  value: number;
+};
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value }: GTagEvent) => {

@@ -20,7 +20,7 @@ You can also use modular styling with css or scss.
 #### Page Analytics
 
 We added functionalities for both google and fathom analytics in this project, so you can choose one that's suitable for your project.
-NB: Create a a `.env.local` file in your root and add your google or fathom analytics id as an environmental variable. Use `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` for google analytics id and `NEXT_PUBLIC_FATHOM_ANALYTICS_ID` as env variable for fathom analytics.
+NB: Add your google or fathom analytics ids to the `next.config.js` file as environmental variables. Use identifiers/keys `GOOGLE_ANALYTICS_ID` for google analytics id and `FATHOM_ANALYTICS_ID` as env variable for fathom analytics.
 
 #### SEO
 
