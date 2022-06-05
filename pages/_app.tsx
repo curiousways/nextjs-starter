@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         canonical={`${siteUrl}${router.asPath === "/" ? "" : router.asPath}`}
         openGraph={{
           type: "website",
-          url: `${siteUrl}`,
+          url: `${siteUrl}${router.asPath === "/" ? "" : router.asPath}`,
           site_name: siteTitle,
           title: siteTitle,
           description: "Enter description here",
