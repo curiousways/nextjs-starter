@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultSeo
         title={siteTitle}
         description="Enter description here"
-        canonical={`${siteUrl}${router.asPath}`}
+        canonical={`${siteUrl}${router.asPath === "/" ? "" : router.asPath}`}
         openGraph={{
           type: "website",
           url: `${siteUrl}`,
