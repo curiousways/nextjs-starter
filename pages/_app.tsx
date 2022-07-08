@@ -7,8 +7,8 @@ import * as Fathom from "fathom-client";
 
 import * as gtag from "../lib/gtag";
 
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Nav from "@/components/common/Nav";
+import Footer from "@/components/common/Footer";
 
 import "../styles/globals.css"; // Global style sheet for css
 // import "../styles/global.scss"; //Global stylesheet for sass
