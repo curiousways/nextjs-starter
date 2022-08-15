@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const siteTitle = process.env.SITE_TITLE;
   const fathom = process.env.FATHOM_ANALYTICS_ID as string; //fathom analytics id
   const siteUrlhttpsStripped = process.env.SITE_URL?.split("//")[1] as string;
+  const isHomePage = router.asPath === "/";
 
   useEffect(() => {
     // Load fathom analytics
@@ -48,10 +49,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultSeo
         title={siteTitle}
         description="Enter description here"
-        canonical={`${siteUrl}${router.asPath === "/" ? "" : router.asPath}`}
+        canonical={`${siteUrl}${isHomePage ? "" : router.asPath}`}
         openGraph={{
           type: "website",
-          url: `${siteUrl}${router.asPath === "/" ? "" : router.asPath}`,
+          url: `${siteUrl}${isHomePage ? "" : router.asPath}`,
           site_name: siteTitle,
           title: siteTitle,
           description: "Enter description here",
