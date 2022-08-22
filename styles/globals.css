@@ -21,7 +21,7 @@
     font-display: swap;
   }
 
-  html {
+  html:focus-within {
     scroll-behavior: smooth;
   }
 }
