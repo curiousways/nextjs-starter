@@ -2,9 +2,12 @@ import { ReactChildren, ReactChild } from "react";
 
 import { useRouter } from "next/router";
 
-type NavLinkProps = { href: string; children: ReactChild | ReactChildren };
+type NavLinkProps = {
+  href: string;
+  children: ReactChild | ReactChildren;
+};
 
-function NavLink({ children, href }: NavLinkProps) {
+export function NavLink({ children, href }: NavLinkProps) {
   const router = useRouter();
 
   const sharedStyles = `underline-offset-4 uppercase text-xl`;
@@ -25,5 +28,3 @@ function NavLink({ children, href }: NavLinkProps) {
     </a>
   );
 }
-
-export default NavLink;
