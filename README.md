@@ -14,7 +14,7 @@
 
 This project is bootstrapped using [Next.js](https://nextjs.org/docs), [Typescript](https://www.typescriptlang.org/) and [TailwindCSS](https://tailwindcss.com/) (optional).
 
-To get started, clone this repo using `git clone https://github.com/Curious-Ways/flox.git`. Next run `npm i` or `npm install` to install all required dependencies (you need Node JS installed on your machine to run `npm` commands. [See here](https://nodejs.org/en/download/) to download and install Node JS on your machine).
+To get started, clone this repo using `git clone https://github.com/curiousways/nextjs-starter.git`. Next run `npm i` or `npm install` to install all required dependencies (you need Node JS installed on your machine to run `npm` commands. [See here](https://nodejs.org/en/download/) to download and install Node JS on your machine).
 
 After the installation is complete:
 
