@@ -1,10 +1,10 @@
-import { ReactChildren, ReactChild } from "react";
+import { ReactNode } from "react";
 
 import { useRouter } from "next/router";
 
 type NavLinkProps = {
   href: string;
-  children: ReactChild | ReactChildren;
+  children: ReactNode;
 };
 
 export function NavLink({ children, href }: NavLinkProps) {
