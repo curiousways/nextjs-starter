@@ -1,6 +1,11 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 
-const Home: NextPage = () => {
+import { request } from "@/lib/datocms";
+
+import { GET_PAGE } from "@/lib/queries";
+
+const Home = ({ page }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log(page);
   return (
     <>
       <div>
@@ -11,3 +16,17 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<{ page: any }> = async ({
+  params,
+}) => {
+  const { homePage } = (await request({
+    query: GET_PAGE,
+    variables: { slug: params?.page },
+  })) as any;
+
+  return {
+    props: { page: homePage },
+    revalidate: 60,
+  };
+};

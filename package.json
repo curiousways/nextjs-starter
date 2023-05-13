@@ -11,9 +11,12 @@
   "dependencies": {
     "fathom-client": "^3.4.1",
     "framer-motion": "^7.6.19",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.0.0",
     "next": "^13.0.6",
     "next-seo": "^4.29.0",
     "react": "^18.2.0",
+    "react-datocms": "^4.0.15",
     "react-dom": "^18.2.0",
     "sass": "^1.49.7"
   },
